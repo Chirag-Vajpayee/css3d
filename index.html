@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+  
+
+     <section id="section1">
+     
+        <div class="container">
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+
+                <img style="width: 230px; height: 250px;"
+                    src="https://static.wixstatic.com/media/6002ea_c14c5c2d945843639f5b424774c790ab~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    
+                    <h2>BUY NOW</h2>
+                </a>
+
+
+                <img style="width: 260px; height: 270px;"src="https://static.wixstatic.com/media/0ed64b_ec90899f0eea4eac93af847e75f84f08~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+
+                <img style="width: 230px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_417794fba5cf4d08a0ee918275b57e2a~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+
+                <img style="width: 230px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_5f8f90ecb5274c14b86387d7fd494715~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+
+                <img style="width: 230px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_d53f2597ab86418c87780676c521aab6~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+                <img style="width: 210px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_d41476fd42d04b1291b810f5df032cca~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+                <img style="width: 230px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_c8e86c7dab6644ac83bf4a5059e10f88~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+                <img style="width: 260px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_628418c868bb40e59199db344c823cc3~mv2.png" alt=""
+                    class="product">
+            </div>
+
+            <div class="box">
+                <h2 class="name">PRODUCT</h2>
+                <a href="#" class="buy">
+                    <h2>BUY NOW</h2>
+                </a>
+
+                <img style="width: 230px; height: 230px;"
+                    src="https://static.wixstatic.com/media/0ed64b_6c2355e79c354702b2643235fcad5cad~mv2.png" alt=""
+                    class="product">
+            </div>
+
+        </div>
+    </section> 
+   
+
+    <script>
+        let section = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+    
+        window.onscroll = () => {
+            
+          section.forEach(sec =>{
+    
+            let top = window.scrollY;
+            let offset = sec.offsetTop -150;
+            let height = sec.offsetHeight;
+            let  id = sec.getAttribute('id');
+    
+            if(top >= offset && top < offset + height){
+                 navLinks.forEach(links =>{  
+                     links.classList.remove('active');
+                     document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                 });
+            };
+    
+          });
+        };
+      </script>
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"
+        integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+
+</body>
+
+</html>
